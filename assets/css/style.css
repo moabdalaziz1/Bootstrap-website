@@ -1,0 +1,542 @@
+:root {
+  --color-dark: #000;
+  --color-white: #fff;
+  --color-muted: #999;
+  --color-muted-2: #666;
+  --color-footer-list: #555;
+  --color-paragraph: #333;
+  --about-us-bg: #e7ccfe;
+  --team-bg: #f3eace;
+  --linear-gradient: linear-gradient(
+    180deg,
+    #8bd995 0%,
+    #e7f86c 43.75%,
+    #ecdbad 75.52%,
+    #f3bcf4 100%
+  );
+  --linear-gradient-secondary: linear-gradient(
+    146.42deg,
+    #d5bbeb 18.16%,
+    rgba(213, 187, 235, 0) 85.99%
+  );
+}
+
+body {
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Oswald', sans-serif;
+  color: var(--color-dark);
+}
+
+.header,
+.about-us,
+.team,
+.get-start {
+  margin: 20px 20px 0 20px;
+}
+.header,
+.about-us,
+.team,
+.get-start {
+  border-radius: 50px;
+}
+
+/* Start The Header Section */
+.header {
+  background: var(--linear-gradient);
+  overflow: hidden;
+}
+
+.header-text span {
+  line-height: 41px;
+  font-size: 24px;
+}
+.header-text .title {
+  font-size: 60px;
+  line-height: 90px;
+  margin-top: 35px;
+  margin-bottom: 56px;
+}
+
+.header-content .nav-items {
+  margin-bottom: 56px;
+}
+.header-content .nav-items .nav-item {
+  padding: 0;
+  color: var(--color-dark);
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'Lato', 'Oswald', sans-serif;
+  text-decoration: none;
+}
+.header-content a.nav-item.active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark);
+  display: flex;
+  margin-top: 12px;
+}
+
+.btn-header {
+  width: 300px;
+  border-radius: 100px;
+  background-color: var(--color-dark);
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 45px;
+  padding: 8px;
+  font-family: 'Lato', 'Oswald', sans-serif;
+  font-weight: 800;
+}
+.btn-header:hover {
+  background-color: var(--color-dark);
+}
+.btn-header div {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border-radius: 50%;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.image-container {
+  padding: 0;
+}
+.header .header-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Start The Feature Section And Icludes The Case Study Section In The Portfolio Section */
+.featured-projects {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.feature-header {
+  margin-bottom: 50px;
+}
+.feature-header .feature-title {
+  font-size: 50px;
+}
+/* Update Case Study Title Font Size */
+.caseStudy-header .caseStudy-title {
+  font-size: 36px;
+}
+
+.feature-arrows,
+.caseStudy-arrows {
+  display: flex;
+  gap: 10px;
+}
+.feature-arrows > span,
+.caseStudy-arrows > span {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background: var(--linear-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/* Update Case Study Arrows Size */
+.caseStudy-arrows > span {
+  width: 50px;
+  height: 50px;
+}
+
+.featured-projects .card-body {
+  margin-top: 42px;
+}
+.featured-projects .card-body > span {
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  font-family: 'Lato', 'Oswald', sans-serif;
+}
+.featured-projects .card-body .card-title {
+  color: var(--color-dark);
+  font-size: 36px;
+  line-height: 43px;
+}
+/* caseStudy Section On The Portfolio Page */
+.caseStudy .card-body .card-title {
+  color: var(--color-dark);
+  font-family: 'Lato', 'Oswald', sans-serif;
+  font-size: 26px;
+}
+.caseStudy .card-body .card-text {
+  color: var(--color-paragraph);
+  font-family: 'Lato', 'Oswald', sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+/* View Details Button Functionality */
+.caseStudy .btn-header[aria-expanded='false'].btn-show,
+.caseStudy .btn-header[aria-expanded='true'].btn-hide {
+  display: flex;
+  width: auto;
+  height: 62px;
+  padding: 0 18px 0 8px;
+}
+.caseStudy .btn-header[aria-expanded='true'].btn-show,
+.caseStudy .btn-header[aria-expanded='false'].btn-hide {
+  display: none;
+}
+
+/* Start The About Us Section */
+.about-us {
+  background: var(--about-us-bg);
+  overflow: hidden;
+}
+.about-us-info {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.about-us-info .title {
+  margin-top: 14px;
+  font-size: 56px;
+  line-height: 77px;
+}
+.about-us-info .about-us-phase {
+  color: var(--color-paragraph);
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 500;
+  font-family: 'Lato', 'Oswald', sans-serif;
+}
+.about-us-info .social-media img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutUs-img {
+  background-image: url('../images/aboutUs-circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.aboutUs-img img {
+  width: 100%;
+}
+
+/* Start What We Do Section */
+.what-we-do {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.we-title h1 {
+  font-size: 56px;
+  line-height: 77px;
+}
+
+.we-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+.we-img img {
+  width: 85%;
+}
+.we-img .box-shadow {
+  width: 280px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-dark);
+  filter: blur(20px);
+  margin-left: 22%;
+}
+
+.we-list {
+  font-family: 'Lato', 'Oswald', sans-serif;
+  font-weight: 800;
+}
+.we-list .list-num {
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-muted);
+  margin-bottom: 13px;
+}
+.we-list .list-group-item {
+  padding: 0;
+}
+.we-list .list-title {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 43px;
+  color: var(--color-dark);
+}
+.we-list .list-icon {
+  width: 27px;
+  height: 27px;
+}
+.we-list hr {
+  background-color: var(--color-dark);
+  height: 1px;
+  margin: 35px 0 28px 0;
+}
+
+/* Start The Team Members Section */
+.team {
+  background-color: var(--team-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.team-title h1 {
+  font-size: 56px;
+  line-height: 77px;
+  margin-bottom: 56px;
+}
+
+.member {
+  font-family: 'Lato', 'Oswald', sans-serif;
+}
+.member-img {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.member-img img {
+  width: 100%;
+}
+.member-name {
+  margin-top: 35px;
+  margin-bottom: 14px;
+  font-size: 32px;
+  line-height: 38px;
+}
+.member-job {
+  color: var(--color-muted-2);
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+/* Start The Testimonials Section */
+.testimonials {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.testimonials-cards {
+  font-family: 'Lato', 'Oswald', sans-serif;
+}
+.testimonials-cards .card {
+  border: 1px solid #111;
+  padding: 50px;
+  border-radius: 25px;
+  color: var(--color-dark);
+}
+.testimonials-cards .card-paragraph {
+  font-size: 28px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+.card-client .client-name {
+  font-size: 24px;
+  line-height: 35px;
+}
+.card-client .client-subTitle {
+  color: var(--color-muted-2);
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* Start The Get Start Section */
+.get-start {
+  background-color: var(--about-us-bg);
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.get-start .start-text {
+  font-size: 100px;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+.start-imgs img {
+  width: 50%;
+}
+/* Update For The Portfolio Page */
+.portfolio .get-start {
+  margin-top: 25px;
+}
+/* Start The Footer */
+.footer-title {
+  font-size: 28px;
+  line-height: 41px;
+}
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+.footer-list-title {
+  font-size: 20px;
+  line-height: 30px;
+}
+.footer-list li {
+  font-size: 18px;
+  line-height: 49px;
+  color: var(--color-footer-list);
+  font-family: 'Lato', 'Oswald', sans-serif;
+}
+.copyrights {
+  font-family: 'Lato', 'Oswald', sans-serif;
+  line-height: 19px;
+}
+
+/* Start The Responsive */
+@media (max-width: 991px) {
+  .header-text .title {
+    font-size: 50px;
+    line-height: 75px;
+    margin-top: 17px;
+    margin-bottom: 28px;
+  }
+  .header-content .navbar {
+    margin-bottom: 28px;
+  }
+  .header .header-img img,
+  .aboutUs-img img {
+    width: 80%;
+  }
+
+  .about-us-info {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-projects,
+  .what-we-do {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .feature-header .feature-title {
+    font-size: 40px;
+  }
+  .feature-arrows > span {
+    width: 50px;
+    height: 50px;
+  }
+  .featured-projects .card-body {
+    margin-top: 28px;
+  }
+
+  .footer-list-space {
+    margin-top: -75px;
+  }
+  .footer-list li {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header,
+  .about-us,
+  .team {
+    margin: 10px 10px 0 10px;
+  }
+
+  .header-text span {
+    font-size: 20px;
+  }
+  .header-text .title,
+  .about-us-info .title,
+  .we-title h1,
+  .team-title h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .header-content .navbar-expand .navbar-nav .nav-link {
+    padding-right: 40px;
+    font-size: 16px;
+    line-height: 12px;
+  }
+  .header .header-img img {
+    width: 100%;
+  }
+
+  .feature-header .feature-title {
+    font-size: 30px;
+  }
+  /* Start Case Study On Portfolio Page */
+  .caseStudy-header .caseStudy-title {
+    font-size: 28px;
+  }
+  .caseStudy .card-body .card-title {
+    font-size: 22px;
+  }
+  .caseStudy .card-body .card-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  /* End Case Study On Portfolio Page */
+
+  .feature-arrows > span {
+    width: 40px;
+    height: 40px;
+  }
+  .featured-projects .card-body .card-title {
+    font-size: 30px;
+  }
+
+  .about-us-info .social-media img {
+    width: 80%;
+  }
+  .about-us-info .about-us-phase {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .we-list .list-num {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .we-list .list-title {
+    font-size: 24px;
+  }
+  .we-list .list-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .we-list hr {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+    margin: 25px 0 20px 0;
+  }
+
+  .testimonials-cards .card {
+    padding: 25px;
+  }
+  .testimonials-cards .card-paragraph {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+  .card-client .client-name {
+    font-size: 22px;
+  }
+  .card-client .client-subTitle {
+    line-height: 22px;
+  }
+
+  .get-start .start-text {
+    font-size: 80px;
+  }
+}
